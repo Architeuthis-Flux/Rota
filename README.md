@@ -1,3 +1,117 @@
+# Rǒta
+This is the more complete version of Rǒta
+![IMG_0975b](https://user-images.githubusercontent.com/20519442/197626111-2682aa83-9894-4614-884a-211cef403a91.jpeg)
+
+![1_0_GIF_2 4](https://user-images.githubusercontent.com/20519442/197623333-b9eae115-00ea-4ea8-91c2-5675926cccdb.GIF)
+
+That flashing means it wants your input. These decimal points do way more work than regular decimal points, they tell you a lot about what's going on. When you don't have segments to make crude letters and stuff, you need to get creative with dots.
+
+
+
+https://user-images.githubusercontent.com/20519442/197625332-2014cbfb-5107-4166-b01f-a8d20bc4a214.mp4
+
+
+
+Rǒta is a tool for counting things while being all nerdily extra about it. Are there more efficient ways to count things? Yes. But will those things increase your exposure to Nixie tubes and rotary dials? No? Well then if that's what passes for progress nowadays then I'm going to go live on a mountain somewhere and count things the cooler way, with nixie tubes.
+
+![IMG_0975b](https://user-images.githubusercontent.com/20519442/197626143-0b8da9ae-dbe0-46c3-8e78-2c965b2f44d0.jpeg)
+
+
+It was originally conceived as a gift for a duck hunting lodge, but now I'm making a few more and I know not everyone is into hunting so it's been generalized into a tool for just counting stuff in general where those $3 hand clickers or a golf pencil just lacks the glamour you need in your life. 
+
+Instead of using sequences of numbers to use the special functions, now you just dial 0 and then the function you want which is printed on the number plate. 
+
+here's the special function menu map
+```
+note - I'm calling moving the dial just a little to turn the display on a "click"
+when inside a special function, dial anything to exit (preferably 0 because it's only reading intermittently when in menus, so it's most likely to register)
+
+0 -- enter/exit menu or function   shows 111 when you're in the menu)
+1 -- stopwatch                    click to start, click again to see last time.
+2 -- show battery voltage         briefly turns off the display to get a more accurate reading (not under load)
+3 -- new day                      this stores the total since the last time you started a new day. maximum 63 days
+4 -- does nothing
+5 -- enter a count by digits      enter 3 digits (hundreds - tens - ones) to add to your daily total
+6 -- show history                 click through each day with first the day number (on the left) then the total for that day
+7 -- toggle day/total display     either shows the count for that day or the running total of all days (default is total)
+8 -- golf mode                    keep score for golf - first enter 1-4 players and the decimal points show which player's turn it is
+9 -- clear everything             dial 9 again to confirm. dial anything else to go back
+999999 -- emergency clear         dial 9 six times to emergency clear everything in case something gets messed up same as dialing 10 9 9
+                                  you can also short the middle pulse pin high for super duper emergency clear
+If you want to see what these modes look like, here are some videos of me using them,
+```
+
+
+
+
+The voltage display was added because I was having issues with the K155ID1s browning out before the HV module (it still blows my mind that it works down to like 3V), so the display would just show all the digits on because the nixie drivers weren't blocking any current. 
+
+So now I added a HV shutdown and a super simple voltage sense divider that drops the 9 down by half so it can be read by the AVR64DD32's ADC.
+
+
+Now if the battery voltage is too low, it shuts down the display but still takes input. In case you don't have a spare battery but still want to count. And the power draw is so low for just the microcontroller that the battery life might as well be infinite.
+
+
+
+https://user-images.githubusercontent.com/20519442/197626419-59003e0c-a97b-495f-a466-c8ea541df162.mp4
+
+
+If you notice in the video, the display flashes when the battery voltage updates, that's because when it does the measurement, it briefly shuts the HV module down so we can measure the battery voltage unloaded. Because this thing draws ~300-400mA when it's on so without doing a ton of math and testing different 9v batteries to correct for it, the voltage it shows would be like ~2V lower than it really is unloaded. 
+
+I probably should have put in a fresher battery before I filmed this. 
+
+I also had to design a case for this because I'd always get anxious watching other people use it without one. People with smaller hands tend to put their fingers right on the high voltage section on the back of the Nixies. 
+![IMG_0936](https://user-images.githubusercontent.com/20519442/197626502-5986a3f2-9786-407d-a474-73ecfe45962d.jpeg)
+
+
+This project really helped me change my lukewarm feelings towards rapid prototyping, I've had a 3D printer for years but never really used it much. I found out the reason it never worked is the original spool of filament Sindoh included was garbage. So my prints would always turn into an absolute mess of spaghetti. I finally bought a fresh spool of filament and it works great now.
+
+![IMG_0962](https://user-images.githubusercontent.com/20519442/197626542-a9db3e1a-2bc0-4cbc-95a3-32775121c8e2.jpeg)
+
+I'll definitely have the case made by someone with a more expensive printer when I sell these or give them away, but to get the fit right and make sure there's room for everything inside, 3D printing really saved the day here.
+
+![RotaNumberPlate](https://user-images.githubusercontent.com/20519442/197626724-35d7f85a-14b1-49e0-a744-9d2dded9bd13.png)
+
+
+Putting in the number plate (which I just found out the name of) on these old dials really makes you appreciate how much thought they put into things in the 60's. Like on most phones you would only do this once, but they came up with a really cool system for it.
+
+
+How you do it is by sticking a screwdriver under the ring at the 6 and moving a lever down to the 8 position to release the middle thing.
+
+![IMG_0960](https://user-images.githubusercontent.com/20519442/197626811-78fd25a2-0aa9-4d9c-81ab-b55d80493cb2.jpeg)
+![IMG_0959](https://user-images.githubusercontent.com/20519442/197626831-53a42e87-7145-46e3-b410-23b491b92b19.jpeg)
+
+
+With it off you can see what's going on 
+
+![IMG_0954](https://user-images.githubusercontent.com/20519442/197626920-7cd2f53e-ab70-4588-8e06-f6d29e00dc04.jpeg)
+
+
+Then you just twist this pressure plate and it comes off. 
+![IMG_0957](https://user-images.githubusercontent.com/20519442/197626963-8bfaba2a-ac35-4c27-b012-99e369f1feb4.jpeg)
+![IMG_0955](https://user-images.githubusercontent.com/20519442/197626990-b4835aca-b19f-479d-8dc6-5159aebf505b.jpeg)
+
+
+This isn't the final number plate from above because I'm a millennial and don't have a regular 2D printer. But I might try it on a plotter or a silkscreen to get a nicer finish.
+
+I had to move the holes a bit to get it to line up with the dial, I must have carelessly moved the holes on the Edge Cuts layer in Kicad, but the new Kicad files on here are fixed (as well as a couple other problems) if you want to have these boards made yourself. 
+
+![IMG_0926](https://user-images.githubusercontent.com/20519442/197627114-9e1a494a-ba9a-4e3c-abc2-25c89c4ac7bd.jpeg)
+
+Yes I cleaned that flux off. For Nixies it's particularly important because flux lets enough current flow at that voltage to cause ghosting. I had a lot of problems wit ghosting on the first digit and I tried a bunch of things to get rid of it, eventually what fixed it for me was putting a 220KΩ resistor between high voltage and ground to both drop the voltage a bit (these tiny HV modules don't have an adjustment knob like the bigger ones) and bleed off the extra charge you get when you do low-side switching on nixies.
+
+![IMG_0995](https://user-images.githubusercontent.com/20519442/197627218-c870993c-c2f6-48cf-9c1c-42e6c873cc29.jpeg)
+
+
+
+PCBway was nice enough to sponsor this project. I had never used them before but the boards they sent were great. And their matte black finish is really velvety. 
+
+
+It really seems like they spend a good deal of time with a human looking at your boards and making sure there aren't any problems. And I usually do a lot of weird stuff with my boards that falls outside of the usual best practices of PCB design. But they seemed to roll with it pretty well and make sure I did it on purpose (that came up a lot more with breadWare which they also sponsored.) Which is crazy to me because of how cheap the service is. You'd think it wouldn't be worth their time for my ~$20. 
+
+Either way, I was ready to just pay them for my boards if they were shitty and say so here. But that wasn't necessary because they really did a great job on these. 
+
+
 # RotaDuck
 Sticking Nixie tubes to an old rotary telephone dial
 
