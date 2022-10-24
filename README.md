@@ -112,7 +112,7 @@ It really seems like they spend a good deal of time with a human looking at your
 Either way, I was ready to just pay them for my boards if they were shitty and say so here. But that wasn't necessary because they really did a great job on these. 
 
 
-# RotaDuck
+# RotaDuck (this is the previous revision so I'm leaving this here)
 Sticking Nixie tubes to an old rotary telephone dial
 
 Here's a video of it in action
