@@ -1,8 +1,13 @@
 # Rǒta
-This is the more complete version of Rǒta
-![IMG_0975b](https://user-images.githubusercontent.com/20519442/197626111-2682aa83-9894-4614-884a-211cef403a91.jpeg)
+Here are some different Rǒtas with different options
+![IMG_1778 2](https://user-images.githubusercontent.com/20519442/201711569-40ef605c-c12b-4c56-9fea-919bc490b09b.jpeg)
+
+![IMG_0975b copttty](https://user-images.githubusercontent.com/20519442/201712627-650df17a-27e6-4c06-91d1-4a762fd1d08d.png)
+
+![IMG_1744 2](https://user-images.githubusercontent.com/20519442/201712909-99d46b61-f74d-4dfa-82de-9feb03b750d8.jpg)
 
 ![1_0_GIF_2 4](https://user-images.githubusercontent.com/20519442/197623333-b9eae115-00ea-4ea8-91c2-5675926cccdb.GIF)
+
 
 That flashing means it wants your input. These decimal points do way more work than regular decimal points, they tell you a lot about what's going on. When you don't have segments to make crude letters and stuff, you need to get creative with dots.
 
@@ -10,6 +15,7 @@ That flashing means it wants your input. These decimal points do way more work t
 
 https://user-images.githubusercontent.com/20519442/197625332-2014cbfb-5107-4166-b01f-a8d20bc4a214.mp4
 
+![IMG_1754](https://user-images.githubusercontent.com/20519442/201710996-1dda6a10-2676-4cdb-be2f-f7fb13220ca6.jpeg)
 
 
 Rǒta is a tool for counting things while being all nerdily extra about it. Are there more efficient ways to count things? Yes. But will those things increase your exposure to Nixie tubes and rotary dials? No? Well then if that's what passes for progress nowadays then I'm going to go live on a mountain somewhere and count things the cooler way, with nixie tubes.
@@ -38,7 +44,7 @@ when inside a special function, dial anything to exit (preferably 0 because it's
 9 -- clear everything             dial 9 again to confirm. dial anything else to go back
 999999 -- emergency clear         dial 9 six times to emergency clear everything in case something gets messed up same as dialing 10 9 9
                                   you can also short the middle pulse pin high for super duper emergency clear
-If you want to see what these modes look like, here are some videos of me using them,
+
 ```
 
 
