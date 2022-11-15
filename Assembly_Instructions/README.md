@@ -237,7 +237,11 @@ You may have to sand some oxidation off the rigid arm on the left side where it 
 
 Here's some Slow-mo video of what it should look like
 
-![dial](/Assembly_Instructions/Pictures/Jumperless-22.mp4) 
+
+
+https://user-images.githubusercontent.com/20519442/201819503-7cee38f8-5ffb-4e9a-b226-030ce2a6f39d.mp4
+
+
 
 If everything was done correctly you should be able to screw the lugs on the board into the terminals on the dial and it should work. This is also a good way to make sure your contactors are set up correctly, if they aren't the nixies will just show 0 and won't count when you dial. 
 
