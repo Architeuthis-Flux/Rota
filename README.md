@@ -172,4 +172,5 @@ I also made a rechargeable one by dead bug soldering a tiny 10DFN MCP73213T char
 Eventually that red wire sticking out will be connected to a barrel jack port. Once I decide on an enclosure.
 ![IMG_0796](https://user-images.githubusercontent.com/20519442/176013627-a2ab8784-ac51-44e4-bc0c-d1b09885f908.jpeg)
 
-![oshw_facts (1)](https://user-images.githubusercontent.com/20519442/206932427-013daf34-3148-4ba5-9ff7-82fbd927c5db.jpg)
+![oshw_facts (1)](https://user-images.githubusercontent.com/20519442/206933172-6082a8b9-86c0-4ce3-bffa-d38b760f660f.png)
+
