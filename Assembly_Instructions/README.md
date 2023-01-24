@@ -250,4 +250,9 @@ Now just put in a 9V battery, screw on the case and enjoy your rotary dialing ad
 
 ## So thats it! Your Rota should be working now!
 
+Sometimes the microcontroller will get in a weird state during assembly, so if it's showing anything but 0 when you first turn it on, try doing a hardware reset by connecting the center contactor on the left side (looking at the back) to 5V (you can alligator clip it to the pad labeled 5V at the bottom of the board) at startup like this: 
+![Reset](https://user-images.githubusercontent.com/20519442/214378818-4bddd6d5-d840-4d98-b697-2e664ece4b7a.jpg)
+That should get it completely reset and ready to count.
+
+
 If you have any issues with assembly, feel free to email me at [KevinC@ppucc.io]( KevinC@ppucc.io) and I'd be happy to help with any problems you may run into.
